@@ -32,7 +32,7 @@ export const WeatherBlock = () => {
                 {moment(item?.dt_txt).format('MM/DD/YYYY HH:mm')}
               </p>
               <p className="weather-temperature text-xl">{`Temperature: ${
-                Number(main?.temp).toFixed() > 0
+                Number(item?.main?.temp).toFixed() > 0
                   ? `+${Number(item?.main?.temp).toFixed()}`
                   : `-${Number(item?.main?.temp).toFixed()}`
               } C`}</p>
